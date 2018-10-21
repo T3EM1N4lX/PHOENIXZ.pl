@@ -25,7 +25,8 @@ print <<EOTEXT;
 
 							Create By PHOENIX Z               .
 
-   Command <ip> <port> <Size> <time>
+   Command <ip> <port> <Size> <time>.
+   EOTEXT
 
 print "::Get @ Me Random:: $ip " . ($port ? $port : "random") . " Disrespected = " .
   ($size ? "$size-byte" : "Disconnected :)") . " ~SnowmaN~ " .
